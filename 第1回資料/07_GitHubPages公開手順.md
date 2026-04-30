@@ -25,7 +25,7 @@
 
 **方法1: VS CodeのLive Server拡張機能（推奨）**
 
-1. VS Codeの拡張機能タブで「Live Server」を検索し、安装
+1. VS Codeの拡張機能タブで「Live Server」を検索し、インストール
 2. `index.html` を右クリック → 「Open with Live Server」
 3. ブラウザで http://localhost:5500 が開く
 4. 編集を保存すると自動的にページが更新される
@@ -87,13 +87,13 @@ git config user.email "あなたのnoreplyメールアドレス"
 gh api user/emails --jq '.[] | select(.email | contains("noreply")) | .email'
 ```
 
-> ℹ️ **メモ**: この設定により、コミット履歴に реальメールアドレスが表示されなくなります
+> ℹ️ **メモ**: この設定により、コミット履歴に実際のメールアドレスが表示されなくなります
 
 ---
 
 ### 4. リポジトリを作成 & push
 
-※ あらかじ `gh auth login` で認証されている必要があります（未の場合は [05_GitHubアカウントと認証.md](05_GitHubアカウントと認証.md) を参照）
+※ あらかじ `gh auth login` で認証されている必要があります（未認証の場合は [05_GitHubアカウントと認証.md](05_GitHubアカウントと認証.md) を参照）
 
 ターミナルで以下を実行:
 
