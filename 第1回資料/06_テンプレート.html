@@ -37,6 +37,16 @@
       font-size: 0.9em;
     }
   </style>
+  <style>
+    /* 次回予告のアニメーション */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+    }
+    .next-preview {
+      animation: pulse 2s ease-in-out infinite;
+    }
+  </style>
 </head>
 <body>
   <h1>自己紹介</h1>
@@ -58,5 +68,26 @@
   
   <hr>
   <p><small>Created at 第1回 Web系勉強会</small></p>
+
+  <!-- ========================
+       次回への予告：もっと知りたい人は试试！
+       ======================== -->
+  <details class="next-preview" style="margin-top: 30px; padding: 15px; border: 2px dashed #4CAF50; border-radius: 8px;">
+    <summary style="cursor: pointer; font-weight: bold; color: #4CAF50;">
+      🌟 次回予告：もっと自由にカスタマイズしよう
+    </summary>
+    <div style="margin-top: 15px;">
+      <p><strong>第2回では、こんなことを学びます：</strong></p>
+      <ul style="line-height: 2;">
+        <li>CSSで本格的なデザイン（アニメーション、レスポンシブ）</li>
+        <li>JavaScriptでインタラクティブな機能</li>
+        <li>画像を載せる方法</li>
+        <li>フォントや配色をプロっぽくするテクニック</li>
+      </ul>
+      <p style="background: #fff3cd; padding: 10px; border-radius: 4px;">
+        💡 <strong>ヒント</strong>: 今のHTMLを自分色に染めてみると、次回がより楽しくなります！
+      </p>
+    </div>
+  </details>
 </body>
 </html>
