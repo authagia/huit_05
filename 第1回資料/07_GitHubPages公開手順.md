@@ -69,6 +69,28 @@ git commit -m "first commit"
 
 ---
 
+### 3-1. メールをPrivateに設定（推奨）
+
+GitHubのコミット履歴に実際のメールアドレスを公開したくない場合:
+
+1. https://github.com/settings/emails にアクセス
+2. **「Keep my email address private」** にチェックを入れる
+3. 表示される noreply メールアドレスをコピー
+
+```bash
+# Gitのメール設定をPrivateアドレスに変更
+git config user.email "あなたのnoreplyメールアドレス"
+```
+
+またはターミナルで確認:
+```bash
+gh api user/emails --jq '.[] | select(.email | contains("noreply")) | .email'
+```
+
+> ℹ️ **メモ**: この設定により、コミット履歴に реальメールアドレスが表示されなくなります
+
+---
+
 ### 4. リポジトリを作成 & push
 
 ※ あらかじ `gh auth login` で認証されている必要があります（未の場合は [05_GitHubアカウントと認証.md](05_GitHubアカウントと認証.md) を参照）
