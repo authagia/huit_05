@@ -329,6 +329,7 @@ DiscordにURLを貼り付けてください 🎉
 - このURLをDiscordに貼り付けて、他の人と見せ合いましょう
 -->
 
+
 ---
 
 ## 確認チェック
@@ -364,3 +365,43 @@ DiscordにURLを貼り付けてください 🎉
 - 今日公開したページを少しずつ良くしていきます
 - 自分のサイトを自分色に染めてみましょう
 -->
+
+---
+
+## おまけ: WSL（Linux環境）
+
+> 必須ではありません。Linuxコマンドを使いたい場合のみインストールしてください。
+
+### インストール
+
+PowerShellを管理者として実行:
+
+```powershell
+wsl --install
+```
+
+再起動後、Ubuntuが自動で起動します。
+
+### 確認
+
+```bash
+wsl -l -v
+```
+---
+
+### 入れなかった場合
+
+```powershell
+wsl --list --online
+wsl --install -d Ubuntu
+```
+
+<!-- 
+話す内容:
+- WSLはWindows上でLinuxを実行できる機能
+- 必須ではありませんが、Linuxコマンドを使いたい人は入れておくと便利です
+-->
+
+参考になりそうなページ↓
+https://qiita.com/nanbuwks/items/55acf8107bad347d2cd0
+https://zenn.dev/long910/articles/2026-02-21-wsl-ubuntu-setup
