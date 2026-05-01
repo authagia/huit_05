@@ -283,7 +283,16 @@ gh repo create
 ### 選択
 
 - **「Push an existing local repository to GitHub」** を選択
-- Description: 「自己紹介ページ」
+```bash
+? What would you like to do? Push an existing local repository to github.comを選択
+? Path to local repository (.) エンター
+? Repository name (dev) my-super-siteなど任意の名前
+? Repository owner 自分のユーザー名
+? Description 任意(空白でもOK)
+? Visibility Publicを選択
+? Add a remote? Yes
+? What should the new remote be called? (origin)エンター
+```
 
 <!-- 
 話す内容:
@@ -313,7 +322,7 @@ gh repo create
 ## 公開URLを確認
 
 ```bash
-gh repo view --json url
+echo "https://$(gh repo view --json owner,name --jq '.owner.login').github.io/$(gh repo view --json name --jq .name)/"
 ```
 
 またはブラウザで開いて確認
