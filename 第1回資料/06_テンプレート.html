@@ -1,93 +1,211 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>私の自己紹介ページ</title>
-  <style>
+  <!-- <style>
     body {
       font-family: sans-serif;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
       padding: 20px;
-      line-height: 1.6;
-    }
-    h1 {
+      line-height: 1.7;
       color: #333;
-      border-bottom: 2px solid #4CAF50;
+    }
+
+    h1 {
+      color: #2c3e50;
+      border-bottom: 3px solid #3498db;
       padding-bottom: 10px;
     }
+
+    h2 {
+      color: #3498db;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
+    }
+
     .profile {
       background: #f9f9f9;
       padding: 20px;
       border-radius: 8px;
       margin: 20px 0;
     }
+
     .name {
-      font-size: 1.5em;
+      font-size: 1.4em;
       font-weight: bold;
-      color: #4CAF50;
+      color: #27ae60;
     }
-    .favorite {
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #3498db;
+      color: white;
+    }
+
+    form {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    address {
+      background: #e8f6f3;
+      padding: 15px;
+      border-radius: 8px;
+      font-style: normal;
       margin-top: 15px;
     }
-    .favorite strong {
-      display: block;
-      color: #666;
-      font-size: 0.9em;
-    }
-  </style>
-  <style>
-    /* 次回予告のアニメーション */
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.05); opacity: 0.8; }
-    }
-    .next-preview {
-      animation: pulse 2s ease-in-out infinite;
-    }
-  </style>
-</head>
-<body>
-  <h1>自己紹介</h1>
-  
-  <div class="profile">
-    <div class="name">名前</div>
-    <p>こんにちは！ここに自己紹介を書いてください。</p>
-    
-    <div class="favorite">
-      <strong>好きなこと</strong>
-      <span>ここに好きなことを書いてください</span>
-    </div>
-    
-    <div class="favorite">
-      <strong>最近の趣味</strong>
-      <span>ここに最近の趣味を書いてください</span>
-    </div>
-  </div>
-  
-  <hr>
-  <p><small>Created at 第1回 Web系勉強会</small></p>
 
-  <!-- ========================
-       次回への予告：もっと知りたい人は挑戦しよう！
-       ======================== -->
-  <details class="next-preview" style="margin-top: 30px; padding: 15px; border: 2px dashed #4CAF50; border-radius: 8px;">
-    <summary style="cursor: pointer; font-weight: bold; color: #4CAF50;">
-      🌟 次回予告：もっと自由にカスタマイズしよう
-    </summary>
-    <div style="margin-top: 15px;">
-      <p><strong>第2回では、こんなことを学びます：</strong></p>
-      <ul style="line-height: 2;">
-        <li>CSSで本格的なデザイン（アニメーション、レスポンシブ）</li>
-        <li>JavaScriptでインタラクティブな機能</li>
-        <li>画像を載せる方法</li>
-        <li>フォントや配色をプロっぽくするテクニック</li>
+    pre {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    .next-preview {
+      margin-top: 30px;
+      padding: 15px;
+      border: 2px dashed #27ae60;
+      border-radius: 8px;
+    }
+
+    .next-preview summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #27ae60;
+    }
+  </style> -->
+</head>
+
+<body>
+  <header>
+    <h1>自己紹介</h1>
+    <p>スポーツ雰囲ようこそ！私のことををご紹介します。</p>
+  </header>
+
+  <nav>
+    <a href="#profile">プロフィール</a> |
+    <a href="#career">経歴</a> |
+    <a href="#records">記録</a> |
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+
+  <main>
+    <section id="profile">
+      <h2>👤 プロフィール</h2>
+      <div class="profile">
+        <div class="name">名前: 田中 一郎</div>
+        <p>こんにちは！ここに自己紹介を書いてください。</p>
+        <p><strong>出身:</strong> ここに出身地を書いてください</p>
+        <p><strong>所属:</strong> ここにチームを書いてください</p>
+      </div>
+    </section>
+
+    <section id="career">
+      <h2>🏃 経歴</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>年</th>
+            <th>所属</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2020-2023</td>
+            <td>高校サッカー部</td>
+          </tr>
+          <tr>
+            <td>2024-現在</td>
+            <td>大学サッカー部</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="records">
+      <h2>🏆 記録</h2>
+      <ul>
+        <li><strong>全国高校サッカー大会:</strong> ベスト8</li>
+        <li><strong>都道府県リーグ:</strong> 優勝3回</li>
       </ul>
-      <p style="background: #fff3cd; padding: 10px; border-radius: 4px;">
-        💡 <strong>ヒント</strong>: 今のHTMLを自分色に染めてみると、次回がより楽しくなります！
-      </p>
-    </div>
+    </section>
+
+    <section id="contact">
+      <h2>📧 お問い合わせ</h2>
+      <form action="#" method="post">
+        <label for="name">名前</label>
+        <input type="text" id="name" name="name" required placeholder="お名前を入力">
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" required placeholder="example@mail.com">
+        <button type="submit">送信する</button>
+      </form>
+      <address>
+        <strong>連絡先:</strong> <a href="mailto:example@mail.com">example@mail.com</a>
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>&copy; 2026 田中一郎. All rights reserved.</small></p>
+  </footer>
+
+  <details class="next-preview">
+    <summary>🌟 今後の予定</summary>
+    <p><strong>次の試合：</strong></p>
+    <ul>
+      <li>6月15日 - 大学リーグ戦</li>
+      <li>7月1日 - 全国大会予選</li>
+      <li>7月20日 - 夏のカップ戦</li>
+    </ul>
+    <p><strong>ヒント:</strong> 今のHTMLを自分色に染めてみてください！</p>
   </details>
 </body>
+
 </html>
