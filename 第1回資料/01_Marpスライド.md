@@ -241,6 +241,8 @@ git config user.email "あなたのnoreplyメールアドレス"
 
 ```bash
 gh api user/emails --jq '.[] | select(.email | contains("noreply")) | .email'
+# 権限が原因で失敗したら
+gh auth refresh -s user
 ```
 
 <!-- 
