@@ -212,6 +212,11 @@ python -m http.server 8000
 
 VS Codeのターミナル（Ctrl + `@`）で以下を実行:
 
+gitリポジトリを初期化
+```bash
+git init
+```
+
 ```bash
 git config user.name "あなたの名前"
 git config user.email "あなたのメール"
@@ -256,7 +261,6 @@ gh auth refresh -s user
 ## コミットする
 
 ```bash
-git init
 git add .
 git commit -m "first commit"
 ```
