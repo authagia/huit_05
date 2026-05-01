@@ -128,6 +128,8 @@ gh --version
 
 ## GitHub CLIにログイン
 
+##### githubのアカウントを作成後以下を実行
+
 ```bash
 gh auth login
 ```
