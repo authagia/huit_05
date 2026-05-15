@@ -80,9 +80,7 @@ winget install Git.Git
 
 ### Mac
 
-```bash
-xcode-select --install
-```
+デフォルトでインストールされているので不要
 
 ### 確認
 
@@ -222,6 +220,9 @@ git config user.name "あなたの名前"
 git config user.email "あなたのメール"
 ```
 
+> 世界に公開される名前・メールアドレスなので注意！
+> たぶん適当に入力しても問題ないはず
+
 <!-- 
 話す内容:
 - 名前とメールはGitHubと同じものを入れてください
@@ -326,6 +327,7 @@ echo "https://$(gh repo view --json owner,name --jq '.owner.login').github.io/$(
 ```
 
 またはブラウザで開いて確認
+![w:450](repository.png) ![w:450](deployments.png)
 
 <!-- 
 話す内容:
