@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>コインクリッカー</title>
+    <style>
+        /* 簡単なスタイル：ここを第5回で自由にいじる */
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            background: #f0f0f0;
+            padding-top: 50px;
+        }
+
+        #click-btn {
+            font-size: 80px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .score-board {
+            font-size: 24px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🪙 コインクリッカー 🪙</h1>
+
+    <div class="score-board">
+        持っているコイン: <span id="coin-count">0</span> 枚
+    </div>
+
+    <button id="click-btn">🪙</button>
+
+    <script>
+        // ==========================================
+        // 【第3回の復習】要素を取る
+        // ==========================================
+        const coinCountEl = document.querySelector("#coin-count");
+        const clickBtn = document.querySelector("#click-btn");
+
+        // ==========================================
+        // 【今回の新要素】状態（データ）の管理
+        // ==========================================
+        // 最初はLocalStorageから読み込み、無ければ0からスタート
+        let coin = Number(localStorage.getItem("savedCoinCount")) || 0;
+
+        // 起動時に、保存されていたスコアを画面に反映（復習：文字を変える）
+        coinCountEl.textContent = coin;
+
+        // ==========================================
+        // 【第3回の復習】クリックに反応
+        // ==========================================
+        clickBtn.addEventListener("click", () => {
+            // 1. コインを1増やす（ロジック）
+            coin = coin + 1;
+
+            // 2. 画面の文字を変える（UI更新）
+            coinCountEl.textContent = coin;
+
+            // 3. ブラウザに保存する（今回の目玉：LocalStorage）
+            localStorage.setItem("savedCoinCount", coin);
+        });
+    </script>
+</body>
+
+</html>
