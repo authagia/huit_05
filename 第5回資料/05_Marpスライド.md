@@ -5,7 +5,7 @@ paginate: true
 ---
 
 # Web系勉強会 第5回
-## 世界に一つのオリジナルゲームを作ろう！（最終回）
+## 世界に一つのオリジナルゲームを作ろう！
 
 <!-- 
 対象: 第1回～第4回を終えた初学者
@@ -37,9 +37,10 @@ paginate: true
 
 ```
 【自動化実装】 → 【魔改造】 → 【公開】 → 【交換プレイ】
- +10枚/秒が   →  単位クリ  →  URL更  →  友達の
- 購入可能に      ッカーに    新される  ゲームを
-                変身                 遊ぶ
+
+ +10枚/秒が     単位クリ    URL更       友達の
+ 購入可能に     ッカーに    新される    ゲームを
+                変身                  遊ぶ
 ```
 
 最後は **Discordで全員のURLをシェア** して大交流会！
@@ -77,7 +78,7 @@ paginate: true
 
 ```javascript
 let autoCPS = 0;  // 1秒あたりの自動増加量
-let itemCost = 10;
+const itemCost = 10;
 
 upgradeBtn.addEventListener("click", () => {
     if (coin >= itemCost) {      // コインが足りてるか？
@@ -123,6 +124,8 @@ setInterval(() => {
 </div>
 ```
 
+---
+
 ### CSSで見た目を整える
 
 ```css
@@ -155,14 +158,12 @@ setInterval(() => {
 // ❌ 同じコードが2か所に...
 coin = coin + 1;
 coinCountEl.textContent = coin;
-
 // ✅ 関数化してスッキリ
 function plusCoin(amount) {
     coin += amount;
     coinCountEl.textContent = coin;
     localStorage.setItem("savedCoin", coin);
 }
-
 // どこからでも呼べる
 clickBtn.addEventListener("click", () => plusCoin(1));
 
@@ -186,7 +187,7 @@ setInterval(() => {
 | テーマ | クリック対象 | アイテム例 |
 |--------|-----------|---------|
 | **単位クリッカー** | 🎓 | 過去問、出席カード |
-| **レポート文字数** | 📝 | エナジー、コピペ |
+| **レポート文字数** | 📝 | エナジードリンク、コピペ |
 | **ラーメン** | 🍜 | チャーシュー、にんにく |
 | **推し活** | 💕 | グッズ、チケット |
 
@@ -202,6 +203,8 @@ setInterval(() => {
 
 ### 背景・フォント・色を変える
 
+グラデーション
+
 ```css
 body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -209,8 +212,15 @@ body {
     color: white;
 }
 
+```
+
+---
+## CSSでデザインを爆発させる
+
+アニメーション
+```css
 #click-btn {
-    font-size: 120px;
+    font-size: 120px;  /* 真ん中とセット */
     transition: transform 0.1s;
 }
 
@@ -285,9 +295,7 @@ git push origin main
 
 ## 【タスク4】提出と大交流会
 
-### Discord に URL を貼り付け
-
-#### 🔗 #第5回作品発表 チャンネルへ
+### 自分のtimes に URL を貼り付け
 
 ```
 みんなのURLがここに集まります
@@ -327,6 +335,8 @@ function checkUnlock() {
     }
 }
 ```
+---
+## 🚀 発展課題：超・エクストラクエスト
 
 ### 🔒 クエスト2：複数のアイテム
 

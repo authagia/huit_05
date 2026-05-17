@@ -73,32 +73,8 @@ paginate: true
 
 ### テンプレートファイルを作成
 
+Discordから04i.htmlをダウンロード
 VS Codeで新規ファイル → `index.html` として保存
-
-```html
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>コインクリッカー</title>
-    <style>
-        body { 
-            text-align: center; 
-            font-family: sans-serif; 
-            background: #faf8f5; 
-            padding-top: 50px; 
-        }
-    </style>
-</head>
-<body>
-    <h1>🪙 コインクリッカー 🪙</h1>
-    <div class="score-board">
-        持っているコイン: <span id="coin-count">0</span> 枚
-    </div>
-    <button id="click-btn">🪙</button>
-</body>
-</html>
-```
 
 <!-- 
 話す内容:
@@ -297,7 +273,7 @@ if (coin >= 100) {
        ↓
 第5回: 「放置していてもコインが増える」
        ↓
-ハッカソン: 「本当に作りたいアプリ」を形にする！
+自分で考えた「作りたいアプリ」を形にする！
 ```
 
 <!-- 
