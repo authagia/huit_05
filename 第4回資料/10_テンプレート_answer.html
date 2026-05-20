@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第4回ゲームテンプレート（解答版）</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 720px; margin: 32px auto; padding: 0 16px; }
+    .box { border: 1px solid #ccc; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+    button { padding: 10px 16px; font-size: 1rem; }
+    input { padding: 8px; width: 100%; max-width: 280px; box-sizing: border-box; }
+    #clickButton { font-size: 80px; cursor: pointer; background: none; border: none; outline: none; }
+    .upgrade-btn { background:#007bff; color:white; border:none; padding:8px 12px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <h1>第4回：ゲームテンプレート（解答版）</h1>
+  <div class="box">
+    <label for="playerName">プレイヤー名</label><br />
+    <input id="playerName" type="text" placeholder="名前を入力してください" />
+  </div>
+
+  <div class="box score-board">
+    <div>持っているコイン: <span id="coinCount">0</span> 枚</div>
+    <div style="font-size:14px; margin-top:8px;">自動増加: +<span id="auto-count">0</span> /秒</div>
+  </div>
+
+  <div style="text-align:center; margin:16px 0;">
+    <button id="clickButton">🪙</button>
+  </div>
+
+  <div class="box">
+    <button id="saveButton">セーブ</button>
+    <button id="upgrade-btn" class="upgrade-btn">自動化アイテム購入（10枚）</button>
+  </div>
+
+  <div class="box" id="unlockArea" style="display: none;">
+    <p>おめでとう！アンロックされました！</p>
+    <button id="specialButton">スペシャルアイテムを使う</button>
+  </div>
+
+  <script src="11_サンプルコード.js"></script>
+</body>
+</html>
