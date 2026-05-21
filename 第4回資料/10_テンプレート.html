@@ -9,16 +9,12 @@
     .box { border: 1px solid #ccc; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
     button { padding: 10px 16px; font-size: 1rem; }
     input { padding: 8px; width: 100%; max-width: 280px; box-sizing: border-box; }
-    #clickButton {
-            font-size: 80px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            outline: none;
-        }
+    #click-button {font-size: 80px;cursor: pointer; background: none; border: none; outline: none;}
+    #coin-container { text-align: center;}
   </style>
 </head>
 <body>
+
   <h1>第4回：ゲームテンプレート</h1>
   <div class="box">
     <label for="playerName">プレイヤー名</label><br />
@@ -27,9 +23,13 @@
 
   <div class="box score-board">
     <div>持っているコイン: <span id="coinCount">0</span> 枚</div>
+
   </div>
 
-  <button id="clickButton">🪙</button>
+  <div id="coin-container">
+    <button id="click-button">🪙</button>
+  </div>
+
   <div class="box">
     <button id="saveButton">セーブ</button>
   </div>
@@ -43,7 +43,7 @@
     ここから先は配布用の虫食いテンプレートです。
     1) まずはこのままブラウザで開いて動作を確認する
     2) `11_サンプルコード.js` のコメントを読みながら、必要な関数や処理を埋める
-    3) あとで見た目やテーマを自由に変えてください
+    3) あとで見た目やテーマを自由に変える
   -->
 
   <script src="11_配布用_虫食い.js"></script>
